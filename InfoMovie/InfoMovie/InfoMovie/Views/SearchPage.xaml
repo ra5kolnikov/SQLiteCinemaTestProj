@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:InfoMovie.ViewModels"
+             x:Class="InfoMovie.Views.SearchPage"
+             Title="Search Movies">
+    <ContentPage.BindingContext>
+        <vm:SearchViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout Margin="20">
+        <Entry Placeholder="{Binding PlaceholderText}" Text="{Binding SearchQuery}" />
+        
+        <Picker Title="Select search criteria" SelectedItem="{Binding SelectedCriteria}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Title</x:String>
+                    <x:String>Genre</x:String>
+                    <x:String>Actor</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        
+        <Button Text="Search" Command="{Binding SearchCommand}" />
+        
+        <ListView ItemsSource="{Binding SearchResults}" SelectedItem="{Binding SelectedMovie}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding Title}" Detail="{Binding Genre}" ImageSource="{Binding ImageUrl}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

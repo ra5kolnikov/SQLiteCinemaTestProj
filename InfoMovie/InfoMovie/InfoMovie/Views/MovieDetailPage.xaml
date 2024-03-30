@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:InfoMovie.ViewModels"
+             x:Class="InfoMovie.Views.MovieDetailPage"
+             Title="Movie Detail">
+    <ContentPage.BindingContext>
+        <vm:MovieDetailViewModel />
+    </ContentPage.BindingContext>
+    <ScrollView>
+        <StackLayout Margin="20">
+            <Image Source="{Binding Movie.ImageUrl}" HeightRequest="520" Aspect="AspectFill" />
+            <Label Text="{Binding Movie.Title}" FontAttributes="Bold" FontSize="Large" HorizontalOptions="Center" Margin="0,10" />
+            <Label Text="{Binding Movie.Genre}" FontSize="Medium" HorizontalOptions="Center" Margin="0,5" />
+            <Label Text="Actors:" FontAttributes="Bold" Margin="0,10" />
+            <ListView ItemsSource="{Binding ActorsList}" VerticalOptions="FillAndExpand" HeightRequest="200">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

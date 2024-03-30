@@ -1,0 +1,23 @@
+﻿[
+  {
+    "Id": 1,
+    "Title": "The Shawshank Redemption",
+    "Genre": "Drama",
+    "Actors": "Tim Robbins, Morgan Freeman",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg"
+  },
+  {
+    "Id": 2,
+    "Title": "The Godfather",
+    "Genre": "Crime, Drama",
+    "Actors": "Marlon Brando, Al Pacino",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/ru/c/c4/Godfather_vhs.jpg"
+  },
+  {
+    "Id": 3,
+    "Title": "The Dark Knight",
+    "Genre": "Action, Crime, Drama",
+    "Actors": "Christian Bale, Heath Ledger",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/ru/2/20/Black_Knight.jpg"
+  }
+]
