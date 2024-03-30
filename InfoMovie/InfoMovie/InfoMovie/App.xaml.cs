@@ -1,49 +1,41 @@
-﻿using System;
-using InfoMovie.Views;
+﻿using InfoMovie.Views;
 using Xamarin.Forms;
-using System.IO;
 using InfoMovie.Helpers;
+using System.Threading.Tasks;
 
 namespace InfoMovie
 {
     public partial class App : Application
     {
-        private static DataBase dataBase;
+        private static MoviesDatabaseContext database;
 
-        public static DataBase DataBase
+        public static MoviesDatabaseContext Database
         {
             get
             {
-                if (dataBase == null)
+                if (database == null)
                 {
-                    dataBase = new DataBase();
+                    database = new MoviesDatabaseContext();
                 }
-
-                return dataBase;
+                return database;
             }
-
         }
 
         public App()
         {
             InitializeComponent();
+            Task.Run(async () =>
+            {
+                await LoadDatabaseAsync();
+            });
 
             MainPage = new NavigationPage(new SearchPage());
         }
 
-        protected override void OnStart()
+        private async Task LoadDatabaseAsync()
         {
-
-        }
-
-        protected override void OnSleep()
-        {
-
-        }
-
-        protected override void OnResume()
-        {
-
+            var postDatabaseHelper = new PostDatabaseHelper<MoviesDatabaseContext>();
+            await postDatabaseHelper.AddOrUpdateMoviessAsync();
         }
     }
 }

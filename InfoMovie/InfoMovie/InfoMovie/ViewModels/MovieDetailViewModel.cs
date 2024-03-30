@@ -32,7 +32,7 @@ namespace InfoMovie.ViewModels
 
         private List<string> ParseActors(string actors)
         {
-            return new List<string>(actors.Split(','));
+            return new List<string>(actors.Split(", "));
         }
     }
 }

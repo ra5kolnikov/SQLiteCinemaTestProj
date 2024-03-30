@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj": {}
+    "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj": {}
   },
   "projects": {
-    "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj": {
+    "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj",
+        "projectUniqueName": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj",
         "projectName": "InfoMovie.Android",
-        "projectPath": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj",
+        "projectPath": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie.Android/InfoMovie.Android.csproj",
         "packagesPath": "/Users/vitalij/.nuget/packages/",
-        "outputPath": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie.Android/obj/",
+        "outputPath": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
@@ -26,8 +26,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj": {
-                "projectPath": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj"
+              "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj": {
+                "projectPath": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj"
               }
             }
           }
@@ -48,27 +48,27 @@
         }
       }
     },
-    "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj": {
+    "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj",
+        "projectUniqueName": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj",
         "projectName": "InfoMovie",
-        "projectPath": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj",
+        "projectPath": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie/InfoMovie.csproj",
         "packagesPath": "/Users/vitalij/.nuget/packages/",
-        "outputPath": "/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/obj/",
+        "outputPath": "/Users/vitalij/Desktop/SQLiteCinemaTestProj/InfoMovie/InfoMovie/InfoMovie/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vitalij/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netstandard2.1"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
-            "targetAlias": "netstandard2.0",
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -79,14 +79,12 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
-          "targetAlias": "netstandard2.0",
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[5.0.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -99,10 +97,6 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2662, )"
-            },
-            "sqlite-net-pcl": {
-              "target": "Package",
-              "version": "[1.9.172, )"
             }
           },
           "imports": [
@@ -115,7 +109,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/Users/vitalij/Library/Caches/VisualStudio/17.0/MSBuild/639_3/RuntimeIdentifierGraph.json"
+          "downloadDependencies": [
+            {
+              "name": "NETStandard.Library.Ref",
+              "version": "[2.1.0, 2.1.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/vitalij/Library/Caches/VisualStudio/17.0/MSBuild/7001_3/RuntimeIdentifierGraph.json"
         }
       }
     }

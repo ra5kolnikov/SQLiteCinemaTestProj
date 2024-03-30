@@ -1,16 +1,22 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using InfoMovie.Helpers;
 using InfoMovie.Models;
 using InfoMovie.Views;
+using Xamarin.Forms;
 
 namespace InfoMovie.ViewModels
 {
     public class SearchViewModel : BaseViewModel
     {
         public ObservableCollection<Movie> Movies { get; set; }
+        public ObservableCollection<Movie> DisplayedMovies { get; set; }
+
+        private int _pageNumber = 0;
+        private const int PageSize = 7;
 
         private string _searchQuery;
         public string SearchQuery
@@ -19,7 +25,7 @@ namespace InfoMovie.ViewModels
             set { SetProperty(ref _searchQuery, value); }
         }
 
-        private string _selectedCriteria;
+        private string _selectedCriteria = "Title";
         public string SelectedCriteria
         {
             get { return _selectedCriteria; }
@@ -47,35 +53,50 @@ namespace InfoMovie.ViewModels
                 if (_selectedMovie != null)
                 {
                     ShowMovieDetail(_selectedMovie);
-                    _selectedMovie = null;
-                    OnPropertyChanged(nameof(SelectedMovie));
                 }
             }
         }
 
-        public ObservableCollection<Movie> SearchResults { get; set; }
-
         public ICommand SearchCommand { get; private set; }
         public ICommand MovieSelectedCommand { get; private set; }
+        public ICommand LoadMoreCommand { get; private set; }
 
         public SearchViewModel()
         {
-            SearchResults = new ObservableCollection<Movie>();
+            DisplayedMovies = new ObservableCollection<Movie>();
             PlaceholderText = "Enter movie title";
             Movies = new ObservableCollection<Movie>();
-            LoadMovies();
 
-            SearchCommand = new RelayCommand<object>(ExecuteSearch);
-            MovieSelectedCommand = new RelayCommand<Movie>(ShowMovieDetail);
+            SearchCommand = new Command(ExecuteSearch);
+            MovieSelectedCommand = new Command<Movie>(ShowMovieDetail);
+            LoadMoreCommand = new Command(async () => await LoadMoreMovies(), CanLoadMore);
+
+             _ = LoadMoviesAsync();
         }
 
-        private async void LoadMovies()
+        private async Task LoadMoviesAsync()
         {
-            var movies = await App.DataBase.GetMoviesAsync();
+            var postDatabaseHelper = new PostDatabaseHelper<MoviesDatabaseContext>();
+            var movies = await postDatabaseHelper.GetMoviesAsync();
+            Movies.Clear();
             foreach (var movie in movies)
             {
                 Movies.Add(movie);
             }
+            await LoadMoreMovies();
+        }
+
+        private async Task LoadMoreMovies()
+        {
+            await Task.Run(() =>
+            {
+                var moviesToDisplay = Movies.Skip(_pageNumber * PageSize).Take(PageSize);
+                foreach (var movie in moviesToDisplay)
+                {
+                    Device.BeginInvokeOnMainThread(() => DisplayedMovies.Add(movie));
+                }
+                _pageNumber++;
+            });
         }
 
         private void UpdatePlaceholderText()
@@ -96,54 +117,36 @@ namespace InfoMovie.ViewModels
 
         private void ExecuteSearch()
         {
-            if (string.IsNullOrWhiteSpace(SearchQuery))
+            DisplayedMovies.Clear();
+
+            if (Movies == null || SearchQuery == null) return;
+
+            var moviesToDisplay = Movies.Where(movie =>
             {
-                // Если строка поиска пуста, отобразить все фильмы
-                SearchResults.Clear();
-                foreach (var movie in Movies)
+                return SelectedCriteria switch
                 {
-                    SearchResults.Add(movie);
-                }
-            }
-            else
+                    "Title" => movie.Title?.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0,
+                    "Genre" => movie.Genre?.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0,
+                    "Actor" => movie.Actors?.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0,
+                    _ => false,
+                };
+            });
+
+            foreach (var movie in moviesToDisplay)
             {
-                // Фильтруем фильмы по запросу и выбранному критерию
-                SearchResults.Clear();
-                foreach (var movie in Movies)
-                {
-                    // Проверяем, содержит ли выбранный критерий фильма строку поиска
-                    switch (SelectedCriteria)
-                    {
-                        case "Title":
-                            if (movie.Title.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0)
-                            {
-                                SearchResults.Add(movie);
-                            }
-                            break;
-                        case "Genre":
-                            if (movie.Genre.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0)
-                            {
-                                SearchResults.Add(movie);
-                            }
-                            break;
-                        case "Actor":
-                            if (movie.Actors.IndexOf(SearchQuery, StringComparison.OrdinalIgnoreCase) >= 0)
-                            {
-                                SearchResults.Add(movie);
-                            }
-                            break;
-                    }
-                }
+                DisplayedMovies.Add(movie);
             }
         }
-
 
         private async void ShowMovieDetail(Movie movie)
         {
             MovieDetailPage detailPage = new MovieDetailPage(movie);
-
             await App.Current.MainPage.Navigation.PushAsync(detailPage);
         }
 
+        private bool CanLoadMore()
+        {
+            return string.IsNullOrWhiteSpace(SearchQuery);
+        }
     }
 }

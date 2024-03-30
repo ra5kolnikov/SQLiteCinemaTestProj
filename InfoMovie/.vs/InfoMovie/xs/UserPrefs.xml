@@ -1,17 +1,7 @@
 ﻿<Properties StartupConfiguration="{8681BD5E-881B-45A7-AE65-7F09CCDD48CC}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/vitalij/Desktop/InfoMovie/InfoMovie/InfoMovie/App.xaml.cs" relfile="InfoMovie/InfoMovie/App.xaml.cs" line="29" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.InfoMovie.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.Ide.Workbench ActiveDocument="InfoMovie/InfoMovie/App.xaml.cs">
     <Files>
-      <File FileName="../../.nuget/packages/xamarin.essentials/1.8.1/readme.txt" />
       <File FileName="InfoMovie/InfoMovie/App.xaml" />
       <File FileName="InfoMovie/InfoMovie/App.xaml.cs" Line="26" Column="1" />
       <File FileName="InfoMovie/InfoMovie/Models/Movie.cs" />
@@ -23,7 +13,6 @@
       <File FileName="InfoMovie/InfoMovie/Views/MovieDetailPage.xaml.cs" />
       <File FileName="InfoMovie/InfoMovie/ViewModels/MovieDetailViewModel.cs" />
       <File FileName="InfoMovie/InfoMovie/Helpers/RelayCommand.cs" />
-      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Legacy.targets" />
       <File FileName="InfoMovie/InfoMovie.Android/Assets/AboutAssets.txt" />
       <File FileName="InfoMovie/InfoMovie/movies.json" />
       <File FileName="InfoMovie/InfoMovie.Android/MainActivity.cs" />
@@ -36,9 +25,11 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="InfoMovie" expanded="True">
-            <Node name="InfoMovie" expanded="True">
+            <Node name="InfoMovie">
               <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
+                <Node name="PackageDependencies" expanded="True">
+                  <Node name="Microsoft.EntityFrameworkCore.Sqlite" selected="True" />
+                </Node>
               </Node>
               <Node name="Helpers" expanded="True" />
               <Node name="Models" expanded="True" />
@@ -46,13 +37,17 @@
               <Node name="Views" expanded="True" />
               <Node name="App.xaml" expanded="True" />
             </Node>
-            <Node name="InfoMovie.Android" expanded="True">
-              <Node name="Packages" expanded="True" />
-            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.2.0" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.ItemProperties.InfoMovie.Android PreferredExecutionTarget="Android.pixel_5_-_api_33" />
 </Properties>
