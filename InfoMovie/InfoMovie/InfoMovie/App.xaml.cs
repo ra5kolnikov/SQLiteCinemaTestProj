@@ -1,6 +1,6 @@
 ﻿using InfoMovie.Views;
 using Xamarin.Forms;
-using InfoMovie.Helpers;
+using InfoMovie.Infrastructure;
 using System.Threading.Tasks;
 
 namespace InfoMovie {
@@ -23,7 +23,7 @@ namespace InfoMovie {
 
     private async Task LoadDatabaseAsync() {
       var postDatabaseHelper = new MovieDatabaseService<MoviesDatabaseContext>();
-      await postDatabaseHelper.AddOrUpdateMoviessAsync();
+      await postDatabaseHelper.AddOrUpdateMoviesAsync();
     }
   }
 }

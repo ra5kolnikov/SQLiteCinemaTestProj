@@ -4,7 +4,8 @@ using System.IO;
 using Xamarin.Forms;
 using InfoMovie.Models;
 
-namespace InfoMovie.Helpers {
+namespace InfoMovie.Infrastructure
+{
   public class MoviesDatabaseContext : DbContext {
     public DbSet<Movie> Movies { get; set; }
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-using InfoMovie.Helpers;
+using InfoMovie.Infrastructure;
 using InfoMovie.ViewModels;
 
 namespace InfoMovie.Commands {

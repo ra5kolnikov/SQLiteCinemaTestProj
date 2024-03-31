@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace InfoMovie.Helpers {
+namespace InfoMovie.Infrastructure {
   public class MovieDatabaseService<T>
       where T : MoviesDatabaseContext {
     protected MoviesDatabaseContext CreateContext() {
@@ -18,7 +18,7 @@ namespace InfoMovie.Helpers {
     }
 
 #region data access
-    public async Task AddOrUpdateMoviessAsync() {
+    public async Task AddOrUpdateMoviesAsync() {
       using (var context = CreateContext()) {
         List<Movie> movies;
         var assembly = typeof(App).Assembly;

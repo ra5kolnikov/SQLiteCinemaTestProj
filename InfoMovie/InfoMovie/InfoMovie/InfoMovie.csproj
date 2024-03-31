@@ -21,16 +21,16 @@
     <None Remove="Models\" />
     <None Remove="ViewModels\" />
     <None Remove="Views\" />
-    <None Remove="Helpers\" />
     <None Remove="movies.json" />
     <None Remove="Commands\" />
+    <None Remove="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Commands\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="movies.json" />

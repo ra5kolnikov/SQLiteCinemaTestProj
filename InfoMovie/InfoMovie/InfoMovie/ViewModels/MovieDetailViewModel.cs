@@ -1,8 +1,5 @@
 ﻿using InfoMovie.Models;
-using System;
 using System.Collections.Generic;
-using System.Net.Http;
-using Xamarin.Forms;
 
 namespace InfoMovie.ViewModels {
   public class MovieDetailViewModel : BaseViewModel {

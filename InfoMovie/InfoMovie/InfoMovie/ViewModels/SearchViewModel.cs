@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using InfoMovie.Commands;
-using InfoMovie.Helpers;
 using InfoMovie.Models;
 using InfoMovie.Views;
 using Xamarin.Forms;
