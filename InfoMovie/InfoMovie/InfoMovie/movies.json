@@ -1,0 +1,93 @@
+﻿[
+  {
+    "Id": 1,
+    "Title": "The Shawshank Redemption",
+    "Genre": "Drama",
+    "Actors": "Tim Robbins, Morgan Freeman",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg"
+  },
+  {
+    "Id": 2,
+    "Title": "The Godfather",
+    "Genre": "Crime, Drama",
+    "Actors": "Marlon Brando, Al Pacino",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/ru/c/c4/Godfather_vhs.jpg"
+  },
+  {
+    "Id": 3,
+    "Title": "The Dark Knight",
+    "Genre": "Action, Crime, Drama",
+    "Actors": "Christian Bale, Heath Ledger",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/ru/2/20/Black_Knight.jpg"
+  },
+  {
+    "Id": 4,
+    "Title": "Pulp Fiction",
+    "Genre": "Crime, Drama",
+    "Actors": "John Travolta, Uma Thurman",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg"
+  },
+  {
+    "Id": 5,
+    "Title": "Forrest Gump",
+    "Genre": "Drama, Romance",
+    "Actors": "Tom Hanks, Robin Wright",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg"
+  },
+  {
+    "Id": 6,
+    "Title": "Inception",
+    "Genre": "Action, Adventure, Sci-Fi",
+    "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+  },
+  {
+    "Id": 7,
+    "Title": "The Matrix",
+    "Genre": "Action, Sci-Fi",
+    "Actors": "Keanu Reeves, Laurence Fishburne",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg"
+  },
+  {
+    "Id": 8,
+    "Title": "The Lord of the Rings: The Fellowship of the Ring",
+    "Genre": "Action, Adventure, Drama",
+    "Actors": "Elijah Wood, Ian McKellen",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Lord_of_the_Rings%2C_TFOTR_%282001%29.jpg"
+  },
+  {
+    "Id": 9,
+    "Title": "Gladiator",
+    "Genre": "Action, Adventure, Drama",
+    "Actors": "Russell Crowe, Joaquin Phoenix",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/ru/f/fe/Gladiatorteaser.jpg"
+  },
+  {
+    "Id": 10,
+    "Title": "The Shawshank Redemption",
+    "Genre": "Drama",
+    "Actors": "Tim Robbins, Morgan Freeman",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg"
+  },
+  {
+    "Id": 11,
+    "Title": "Schindler's List",
+    "Genre": "Biography, Drama, History",
+    "Actors": "Liam Neeson, Ben Kingsley",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg"
+  },
+  {
+    "Id": 12,
+    "Title": "The Silence of the Lambs",
+    "Genre": "Crime, Drama, Thriller",
+    "Actors": "Jodie Foster, Anthony Hopkins",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg"
+  },
+  {
+    "Id": 13,
+    "Title": "The Departed",
+    "Genre": "Crime, Drama, Thriller",
+    "Actors": "Leonardo DiCaprio, Matt Damon",
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/en/5/50/Departed234.jpg"
+  }
+]
