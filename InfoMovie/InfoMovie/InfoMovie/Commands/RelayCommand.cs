@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace InfoMovie.Helpers {
+namespace InfoMovie.Commands {
   public class RelayCommand<T> : ICommand {
     private readonly Action<T> _execute;
     private readonly Func<T, bool> _canExecute;

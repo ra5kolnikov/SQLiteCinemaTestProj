@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using InfoMovie.Helpers;
 using InfoMovie.ViewModels;
@@ -8,12 +6,9 @@ using InfoMovie.ViewModels;
 namespace InfoMovie.Commands {
   public class LoadMoviesCommand : ICommand {
     private readonly SearchViewModel _viewModel;
-    private int _pageNumber;
-    private static int PageSize = 7;
 
     public LoadMoviesCommand(SearchViewModel viewModel) {
       _viewModel = viewModel;
-      _pageNumber = _viewModel.PageNumber;
     }
 
     public event EventHandler CanExecuteChanged;
