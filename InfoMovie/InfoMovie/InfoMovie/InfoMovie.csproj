@@ -23,14 +23,21 @@
     <None Remove="Views\" />
     <None Remove="Helpers\" />
     <None Remove="movies.json" />
+    <None Remove="Commands\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Commands\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="movies.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>..\..\..\..\..\..\..\Library\Frameworks\Xamarin.iOS.framework\Versions\16.4.0.23\lib\mono\Xamarin.iOS\Facades\System.Drawing.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>

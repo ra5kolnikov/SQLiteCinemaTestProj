@@ -12,7 +12,8 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0",
           "Newtonsoft.Json": "13.0.3",
           "Xamarin.Essentials": "1.8.1",
-          "Xamarin.Forms": "5.0.0.2662"
+          "Xamarin.Forms": "5.0.0.2662",
+          "System.Drawing.Common": "4.0.0.0"
         },
         "runtime": {
           "InfoMovie.dll": {}
@@ -396,6 +397,14 @@
             "fileVersion": "5.0.0.1004"
           }
         }
+      },
+      "System.Drawing.Common/4.0.0.0": {
+        "runtime": {
+          "System.Drawing.Common.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
       }
     }
   },
@@ -656,6 +665,11 @@
       "sha512": "sha512-SNQvq2tNJUl54KXfFrCx7SzfxDeJOUxQPaLxzLK8y/KFd6H9mwnhEu/W0Bejv79ogLYIy4r1ka2AHR+injTNow==",
       "path": "xamarin.forms/5.0.0.2662",
       "hashPath": "xamarin.forms.5.0.0.2662.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

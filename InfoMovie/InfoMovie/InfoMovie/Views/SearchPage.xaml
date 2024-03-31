@@ -8,7 +8,7 @@
     </ContentPage.BindingContext>
     <StackLayout Margin="20, 20, 20, 0">
         <Entry Placeholder="{Binding PlaceholderText}" Text="{Binding SearchQuery}" />
-        
+
         <Picker Title="Title" TextColor="Black" SelectedItem="{Binding SelectedCriteria}">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -18,9 +18,9 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        
+
         <Button Text="Search" Command="{Binding SearchCommand}" BackgroundColor="LightGray"/>
-        
+
         <ListView ItemsSource="{Binding DisplayedMovies}" SelectedItem="{Binding SelectedMovie}" RowHeight="70">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -28,18 +28,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-<Frame BackgroundColor="Transparent" HasShadow="False" CornerRadius="5" Margin="0,0,0,10">
-    <Label Text="Load More" 
+
+        <Frame BackgroundColor="Transparent" HasShadow="False" CornerRadius="5" Margin="0,0,0,10">
+            <Label Text="Load More" 
            TextColor="DeepSkyBlue" 
            FontAttributes="Italic" 
            HorizontalOptions="Center" 
            VerticalOptions="CenterAndExpand" 
            FontSize="Medium">
-        <Label.GestureRecognizers>
-            <TapGestureRecognizer Command="{Binding LoadMoreCommand}" />
-        </Label.GestureRecognizers>
-    </Label>
-</Frame>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LoadMoreCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
     </StackLayout>
 </ContentPage>

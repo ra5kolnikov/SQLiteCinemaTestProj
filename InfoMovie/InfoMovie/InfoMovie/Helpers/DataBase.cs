@@ -1,18 +1,18 @@
-﻿//using InfoMovie;
-//using Newtonsoft.Json;
-//using SQLite;
-//using System;
-//using System.Collections.Generic;
-//using System.IO;
-//using System.Reflection;
-//using System.Threading.Tasks;
-//using Xamarin.Forms;
-//using InfoMovie.Models;
+﻿// using InfoMovie;
+// using Newtonsoft.Json;
+// using SQLite;
+// using System;
+// using System.Collections.Generic;
+// using System.IO;
+// using System.Reflection;
+// using System.Threading.Tasks;
+// using Xamarin.Forms;
+// using InfoMovie.Models;
 
-//public class DataBase
+// public class DataBase
 //{
-//    private readonly string _dbPath;
-//    private readonly SQLiteAsyncConnection _database;
+//     private readonly string _dbPath;
+//     private readonly SQLiteAsyncConnection _database;
 
 //    public DataBase()
 //    {
@@ -34,14 +34,17 @@
 //        switch (Device.RuntimePlatform)
 //        {
 //            case Device.Android:
-//                dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "InfoMovie.db3");
-//                break;
+//                dbPath =
+//                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),
+//                "InfoMovie.db3"); break;
 //            case Device.iOS:
-//                dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..", "Library", "InfoMovie.db3");
-//                break;
+//                dbPath =
+//                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..",
+//                "Library", "InfoMovie.db3"); break;
 //            case Device.UWP:
-//                dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "InfoMovie.db3");
-//                break;
+//                dbPath =
+//                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+//                "InfoMovie.db3"); break;
 //        }
 //        return dbPath;
 //    }
@@ -55,7 +58,8 @@
 //            string fileName = "movies.json";
 //            List<Movie> movies = new List<Movie>();
 //            var assembly = typeof(App).GetTypeInfo().Assembly;
-//            Stream stream = assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{fileName}");
+//            Stream stream =
+//            assembly.GetManifestResourceStream($"{assembly.GetName().Name}.{fileName}");
 
 //            using (var reader = new StreamReader(stream))
 //            {
@@ -66,8 +70,8 @@
 
 //            foreach (var movie in movies)
 //            {
-//                var existingMovie = connection.Table<Movie>().FirstOrDefault(m => m.Id == movie.Id);
-//                if (existingMovie == null)
+//                var existingMovie = connection.Table<Movie>().FirstOrDefault(m => m.Id ==
+//                movie.Id); if (existingMovie == null)
 //                {
 //                    connection.Insert(movie);
 //                }
