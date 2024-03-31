@@ -18,7 +18,7 @@ InfoMovie provides the following features:
 ## Deployment Instructions
 
 1. Clone the repository using the command:
-   git clone https://github.com/your-username/InfoMovie.git
+   git clone https://github.com/your-username/InfoMovie.git -b develop
 
 2. Open the InfoMovie solution in Visual Studio for Mac.
 
