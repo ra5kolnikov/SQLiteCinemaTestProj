@@ -1,5 +1,7 @@
 # InfoMovie
 
+**Actual code is in develop branch**
+
 InfoMovie is a mobile application for searching and viewing information about movies. The application allows users to search for movies by various criteria and display detailed information about the selected movie.
 
 ## Functionalities
