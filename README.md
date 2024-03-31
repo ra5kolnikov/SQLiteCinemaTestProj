@@ -22,7 +22,7 @@ InfoMovie provides the following features:
 1. Clone the repository using the command:
    git clone https://github.com/your-username/InfoMovie.git -b develop
 
-2. Open the InfoMovie solution in Visual Studio for Mac.
+2. Open the InfoMovie solution in Visual Studio.
 
 3. Ensure that all required NuGet packages are installed. If not, restore NuGet packages.
 
